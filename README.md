@@ -34,7 +34,7 @@ var d = "42";alert("ma variable a est de type : " + typeof(a) +
 "\nma variable d est de type : " + typeof(d)
 ```
 La méthode alert() de JavaScript m'affiche une fenêtre
-![affichage](img\Capture.PNG)
+![affichage](img/Capture.PNG)
 
 Le code ci-dessous sur JavaScript
 ```
@@ -46,7 +46,7 @@ alert("ma variable machaine est de type: " + typeof(machaine) +
 
 ```
 La méthode alert() de JavaScript m'affiche une fenêtre
-![affichage](img\Capture2.PNG)
+![affichage](img/Capture2.PNG)
 
 Le code ci-dessous sur  JavaScript
 ```
@@ -59,4 +59,4 @@ alert("ma variable n est de type: " + typeof(n) +
 "\nma variable nn est de type : " + typeof(nn));
 ```
 La méthode alert() de JavaScript m'affiche une fenêtre
-![affichage](img\Capture3.PNG)
+![affichage](img/Capture3.PNG)
