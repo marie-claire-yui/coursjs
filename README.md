@@ -1,4 +1,62 @@
-# <p align ="center"> coursjs </p>  
+# <p align ="center"> coursjs </p> 
+![imageJavaScript](img/Javascript.png) 
  ## <p align ="center"> Introduction au JavaScript </p>  
  JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web.
 
+
+
+## Qu'est-ce qu'une variable
+Une variable est un conteneur servant à stocker des informations de manière temporaire, comme une chaine de caractères (un texte) ou un nombre par exemple.
+
+Le propre d’une variable est de pouvoir varier, c’est-à-dire de pouvoir stocker différentes valeurs au fil du temps.
+
+En PHP, les variables ne servent à stocker une information que temporairement. Plus précisément, une variable ne va exister que durant le temps de l’exécution du script l’utilisant.
+
+Ainsi, on ne va pas pouvoir stocker d’informations durablement avec les variables (pour cela, nous pourrons par exemple utiliser les fichiers, cookies ou les bases de données dont nous parlerons plus tard dans ce cours).
+
+Note : Dans le début de ce cours, nous allons définir nous-mêmes les valeurs qui vont être stockées dans nos variables, ce qui n’a pas beaucoup d’intérêt en pratique. C’est donc tout à fait normal si vous ne voyez pas immédiatement le but d’utiliser des variables. Ici, vous pouvez retenir que les variables vont être vraiment intéressantes lorsqu’elles vont nous servir à stocker des données envoyées par les utilisateurs (via des formulaires par exemple) puisqu’on va ensuite pouvoir manipuler ces données.
+
+
+Toute variable en PHP doit commencer par le signe $ qui sera suivi du nom de la variable ;
+Le nom d’une variable doit obligatoirement commencer par une lettre ou un underscore (_) et ne doit pas commencer par un chiffre ;
+Le nom d’une variable ne doit contenir que des lettres, des chiffres et des underscores mais pas de caractères spéciaux ;
+Le nom d’une variable ne doit pas contenir d’espace.
+
+
+Le code ci-dessous sur JavaScript
+```
+var a = 42;
+var b = 4.2;
+var c = -42;
+var d = "42";alert("ma variable a est de type : " + typeof(a) +
+"\nma variable b est de type : " + typeof(b) +
+"\nma variable c est de type : " + typeof(c) +
+"\nma variable d est de type : " + typeof(d)
+```
+La méthode alert() de JavaScript m'affiche une fenêtre
+![affichage](img\Capture.PNG)
+
+Le code ci-dessous sur JavaScript
+```
+var machaine = "exemple";
+var maChaine = new String("exemple");
+
+alert("ma variable machaine est de type: " + typeof(machaine) + 
+"\nma variable maChaine est de type : " + typeof(maChaine));
+
+```
+La méthode alert() de JavaScript m'affiche une fenêtre
+![affichage](img\Capture2.PNG)
+
+Le code ci-dessous sur  JavaScript
+```
+var n = null;
+var u = undefined;
+var nn = NaN;
+
+alert("ma variable n est de type: " + typeof(n) + 
+"\nma variable u est de type : " + typeof(u) +
+"\nma variable nn est de type : " + typeof(nn));
+```
+La méthode alert() de JavaScript m'affiche une fenêtre
+![affichage](img\Capture3.PNG)
