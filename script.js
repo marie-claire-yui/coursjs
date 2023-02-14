@@ -97,14 +97,14 @@ var heureDouverture = 9;
 
 var heureDeFermeture = 17;
 
-var heureActuelle = 9;
+var heureActuelle = 8;
 
 // si heure d'actuelle avant h douverture --> pas encore ouvert
 // si après l'heuree d'ouverture --> revenez Demain
 // si pendant l'horaire d'ouverture --> bienvenue
 
 if (heureActuelle>=heureDouverture && heureActuelle<heureDeFermeture){
-    // console.log("Bienvenue")
+// on imbrique une condition dans une condition
     if (heureActuelle>=9 && heureActuelle<12){
         console.log("Bienvenue. C'est le matin")
     }
@@ -118,3 +118,4 @@ if (heureActuelle>=heureDouverture && heureActuelle<heureDeFermeture){
     console.log("revenez demain")
   }
   
+  // le if else peut être simplifié en condition ternaire
