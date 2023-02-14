@@ -36,7 +36,8 @@ console.log (myTab);
 var a = 42;
 var b = 4.2;
 var c = -42;
-var d = "42";alert("ma variable a est de type : " + typeof(a) +
+var d = "42";
+alert("ma variable a est de type : " + typeof(a) +
 "\nma variable b est de type : " + typeof(b) +
 "\nma variable c est de type : " + typeof(c) +
 "\nma variable d est de type : " + typeof(d)
@@ -55,3 +56,65 @@ var nn = NaN;
 alert("ma variable n est de type: " + typeof(n) + 
 "\nma variable u est de type : " + typeof(u) +
 "\nma variable nn est de type : " + typeof(nn));
+
+// les opérateurs mathématiques
+var x = 32;
+var y = 5;
+var z = 2;
+
+// multiplication
+alert(y*z);
+
+//division
+alert(y/z);
+
+//addition
+alert(y + z);
+
+// soustraction 
+alert(y - z);
+
+// modulo est le restant d'une division
+alert(x % y);
+
+// priorité mathématiques
+// la multiplication est prioritaire
+alert (y+z*x)
+// l'addition est prioritaire
+alert((y+z)*x)
+
+// y = y + z équivaut à y += z additionne et affecte
+y += z // équivaut à y = y + z renvoi 7 car y = 5 + 2
+y *= z // équivaut à y = y * z renvoi 14
+y -= z // équivaut à y = y - z renvoi 12
+y /= z // équivaut à y = y / z renvoi 6
+y %= z // équivaut à y = y % z renvoi 0
+// renvoie la valeur de 0 car à chaque fois écrase la valeur précédente
+alert(y);
+
+
+var heureDouverture = 9;
+
+var heureDeFermeture = 17;
+
+var heureActuelle = 9;
+
+// si heure d'actuelle avant h douverture --> pas encore ouvert
+// si après l'heuree d'ouverture --> revenez Demain
+// si pendant l'horaire d'ouverture --> bienvenue
+
+if (heureActuelle>=heureDouverture && heureActuelle<heureDeFermeture){
+    // console.log("Bienvenue")
+    if (heureActuelle>=9 && heureActuelle<12){
+        console.log("Bienvenue. C'est le matin")
+    }
+    else{
+        console.log("Bienvenue. C'est l'après-midi")
+    }
+  } else if ( heureActuelle < heureDouverture) {
+    console.log("pas encore ouvert")
+  }
+  else {
+    console.log("revenez demain")
+  }
+  
