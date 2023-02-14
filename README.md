@@ -1,2 +1,2 @@
 # coursjs  
- ## <center>Introduction au JavaScript </center> 
+ ## <p align ="center"> Introduction au JavaScript </p> 
