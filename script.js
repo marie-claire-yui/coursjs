@@ -29,6 +29,6 @@ var myTab = new Array(); // on instancie un objet array = on en fait une instanc
 // var myTab = []; on peut créer un tableau vide
 myTab['enfant'] = 'toto';
 myTab['maman'] = 'tati';
-myTab['papa'] = 'tutu'; 
+myTab['papa'] = 'tutuu'; 
 
 console.log (myTab);
