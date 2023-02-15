@@ -76,7 +76,7 @@ alert("ma variable n est de type: " + typeof(n) +
 La méthode alert() de JavaScript m'affiche une fenêtre
 ![affichage](img/Capture3.PNG)
 
-##les opérateurs mathématiques
+## les opérateurs mathématiques
 var x = 32;
 var y = 5;
 var z = 2;
@@ -111,7 +111,7 @@ y %= z // équivaut à y = y % z renvoi 0
 // renvoie la valeur de 0 car à chaque fois écrase la valeur précédente
 alert(y);
 
-##Opérateurs
+## Opérateurs
 opérateurs mathématiques, opérateurs comparaison, opérateur d'affectation sont les 3 types d'opérateurs principaux.
 Egal: on compare uniquement la valeur ==
 Strictement égal: on va comparer la valeur et le type ===
