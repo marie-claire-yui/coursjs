@@ -1,5 +1,5 @@
 # <p align ="center"> coursjs </p> 
-<p align ="center">![imageJavaScript](img/Javascript.png)</p>
+![imageJavaScript](img/Javascript.png)
  ## <p align ="center"> Introduction au JavaScript </p>  
  JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web.
 
@@ -134,3 +134,47 @@ vrai || faux renvoit vrai
 | <= | Permet de tester si une valeur est inférieure ou égale à une autre |
 | >= | Permet de tester si une valeur est supérieure ou égale à une autre |
 
+## Les tableaux
+```
+var maChaine ="cda";
+var arrayNbr = [1 ,2 ,3];
+var arrayStr = ["a","b","c"];
+
+
+arrayNbr.push(4); // envoie le 4 à la fin du tableau [1 ,2 ,3, 4]
+arrayNbr.pop(); // retire le dernier du tableau car renvoi [1,2]
+arrayNbr.shift();//Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+arrayNbr.unshift(0); //Inserts new elements, here 0, at the start of an array, and returns the new length of the array.
+console.table(arrayNbr); 
+console.log(maChaine[1]);
+
+var arrayCopy = arrayStr.concat("d"); //fusionne les tableaux sans changer les valeurs du tableau initiale
+console.log(arrayCopy); // créer une copie de tableau. Permet de fusionner au moins 2 tableaux
+console.log(arrayStr);
+
+// rq les chaines de caractères viennent d'un tableau
+console.log(arrayStr.join('-'));// join les valeurs du tableau sans changer les valeurs initiales séparés par '-'
+
+console.log(arrayStr.slice(1)); // en partant du début [ "b", "c" ]indiquer le nombre d'éléments qu'on souhaite retirer du tableau sans toucher aux valeurs du tableau d'origine
+console.log(arrayStr.slice(-1));// en partant de la fin idem
+
+console.log(arrayNbr.reduce((acc, cou) => acc + cou));
+console.log(arrayStr.includes("c")); //Determines whether an array includes a certain element, returning true or false as appropriate.
+console.log(arrayStr.indexOf("c"));
+
+console.log(arrayNbr.find(el => el > 2)) // 3 renvoie la valeur du premier élément trouvé dans le tableau qui respencte la condition
+// dans mon tableau trouve un élément qui est supérieur à 2
+// fonction simplifiée en écriture, n'a qu'un seul paramètre et qu'un seul retour
+// il s'agit d'une fonction callback
+console.log(arrayNbr.findIndex(el => el > 2));
+console.log(arrayNbr.map(el => el *2)); // revoit un tableau de chaque élément
+console.log(arrayNbr.some(el => el > 2)); // renvoit true si au moins un élément respecte la condition
+console.log(arrayNbr.some(el => el > 5)); // renvoit false
+
+console.log(arrayNbr.filter(el => el > 1)); // renvoie 2 et 3
+// resemble à find sauf qu'il va renvoyer tous les éléments qui respenctent la condition 
+
+console.log(arrayNbr.every(el => el > 1)); // est-ce que tout les éléments respectent la condition ici renvoit false c'est un booléen
+console.log(arrayNbr.reverse()); // inverse tous les éléments qui sont dans le tableau
+
+```
