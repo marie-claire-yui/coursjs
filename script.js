@@ -254,21 +254,23 @@ div[0].style.background = 'rgb(255,0,0)';
 //   console.log('Faire ' + pas + ' pas vers l\'est');
 // }
 
-
+function getRandomInt() {
+  return Math.floor(Math.random() * 256);
+}
 
 // 1ère méthode avec boucle for
 for (let index=0; index<div.length; index +=2)
 {
-  div[index].style.background = 'rgb(255,0,0)';
+  div[index].style.background = 'rgb('+getRandomInt()+','+getRandomInt()+','+getRandomInt()+')';
 }
 
-for (let index=0; index<div.length; index++)
-{ if (index % 2 !=0){
-  div[index].style.background = 'rgb(255,0,0)';
-} else {
-  div[index].style.background = 'rgb(0,255,0)';
-}
-}
+// for (let index=0; index<div.length; index++)
+// { if (index % 2 !=0){
+//   div[index].style.background = 'rgb(255,0,0)';
+// } else {
+//   div[index].style.background = 'rgb(0,255,0)';
+// }
+// }
 
 
 //2 ème méthode avec map
@@ -329,3 +331,8 @@ arrDiv.map((element, index) => index % 2 !=0 ? element.style.background = 'rgb(0
 //   }
 //   return element.style.backgroundColor = 'rgb(0, 255, 0)'
 // })
+
+for (let index=0; index<div.length; index +=2)
+{
+  div[index].style.background = 'rgb('+getRandomInt()+','+getRandomInt()+','+getRandomInt()+')';
+}
