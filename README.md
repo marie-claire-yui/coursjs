@@ -178,3 +178,16 @@ console.log(arrayNbr.every(el => el > 1)); // est-ce que tout les éléments res
 console.log(arrayNbr.reverse()); // inverse tous les éléments qui sont dans le tableau
 
 ```
+| Méthode | Résultat |
+|:-------:|:---------|
+| push(4) |  ajoute la valeur indiqué à la fin du tableau ([1, 2, 3, 4])|
+ | pop() | [1, 2] retire la dernière valeur|
+ | shift() | [2, 3] retire la première valeur|
+ | unshift(0) | [0, 1, 2, 3] ajoute la valeur indiqué au début du tableau|
+ | concat("d")| fusionne des tableaux sans changer les valeurs du tableau initial|
+ | join('-')|  a-b-c joindre les valeurs du tableau sans changer les valeurs du tableau initial|
+ | slice(1)|  ["b", "c"] retire le nombre d'éléments indiqué du tableau en partant du début sans changer les valeurs du tableau initial|
+ | slice(-1)|  ["b", "c"] retire le nombre d'éléments indiqué du tableau en partant du début et en comptant depuis la fin sans changer les valeurs du tableau initial|
+ | includes("c")| true vérifie si la valeur existe|
+ | indexOf("c")| 2 renvoi le position (index) de la valeur dans le tableau|
+ | reduce((acc, cou)=> acc + cou ) |  additionne tous les éléments du tableau|
