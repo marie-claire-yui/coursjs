@@ -227,7 +227,7 @@ console.log(arrayNbr.find(el => el > 2)) // 3 renvoie la valeur du premier élé
 // fonction simplifiée en écriture, n'a qu'un seul paramètre et qu'un seul retour
 // il s'agit d'une fonction callback
 console.log(arrayNbr.findIndex(el => el > 2));
-console.log(arrayNbr.map(el => el *2)); // revoit un tableau de chaque élément
+console.log(arrayNbr.map(el => el *2)); // renvoit un tableau de chaque élément
 console.log(arrayNbr.some(el => el > 2)); // renvoit true si au moins un élément respecte la condition
 console.log(arrayNbr.some(el => el > 5)); // renvoit false
 
@@ -238,8 +238,11 @@ console.log(arrayNbr.every(el => el > 1)); // est-ce que tout les éléments res
 console.log(arrayNbr.reverse()); // inverse tous les éléments qui sont dans le tableau
 
 
+
+// exercice colorier un carré sur deux en rouge
 const div = document.getElementsByClassName('carre');
 console.log(div);
+console.log(typeof div); // renvoit object
 div[0].style.background = 'rgb(255,0,0)';
 // div[2].style.background = 'rgb(255,0,0)';
 // div[4].style.background = 'rgb(255,0,0)';
@@ -274,9 +277,13 @@ for (let index=0; index<div.length; index +=2)
 
 
 //2 ème méthode avec map
+
 const arrDiv = Array.from(div); // faire un tableau
+console.log(arrDiv); // renvoit array (tableau)
+// https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Working_with_Objects
 //arrDiv.map((element, index) => index % 2 !=0 ? div[index].style.background = 'rgb(0,0,255)' : div[index].style.background = 'rgb(0,255,0)');
 arrDiv.map((element, index) => index % 2 !=0 ? element.style.background = 'rgb(0,0,255)' : element.style.background = 'rgb(0,255,0)');
+// on convertir le tableau div fictif en vrai tableau grace à array.from, sinon lorsqu'on fait un map directement dessus il ya un message d'erreur car ce n'est pas une fonction
 
 // arrDiv.map((element, index) => {
 //   if(index % 2 != 0) {
@@ -298,7 +305,6 @@ arrDiv.map((element, index) => index % 2 !=0 ? element.style.background = 'rgb(0
 // 3 ème méthode avec filter
  arrDiv.filter((el, index) => ( index %2 == 0) ? div[index].style.background = 'rgb(0,0,255)' : div[index].style.background = 'rgb(0,255,0)');
  //arrDiv.filter((el, index) => ( index %2 == 0) ? el.style.background = 'rgb(0,0,255)' : el.style.background = 'rgb(0,255,0)');
-
 
  //code sofiane
 // div[0].style.backgroundColor = 'rgb(255, 0, 0)';
@@ -336,3 +342,21 @@ for (let index=0; index<div.length; index +=2)
 {
   div[index].style.background = 'rgb('+getRandomInt()+','+getRandomInt()+','+getRandomInt()+')';
 }
+
+
+// différence entre push et spread operator
+const animals = ['pigs', 'goats', 'sheep'];
+
+//avec push
+const count = animals.push('cows');
+console.log(count);
+
+
+//avec spread operator
+let fruits = ['Apple','Orange','Banana'];
+
+let newFruits = ['Cherry', ...fruits];
+// let newFruits = ['Cherry', ...fruits]; // créé un tableau de 2 éléménts, le premier cherry et le deuxième le tableau fruits
+console.log(newFruits); // ['Cherry', 'Apple','Orange','Banana']
+
+//With push you are appending to the existing array, with spread operator you are creating a copy.
